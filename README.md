@@ -14,7 +14,7 @@ Everything is containerized using Docker and docker-compose. The frontend is ser
 
 ### Data
 
-The project is made using the `classicmodels` database. The database is a sample database created by MySQL and can be downloaded from [here](https://www.mysqltutorial.org/mysql-sample-database.aspx/). The database is a simple database containing information about a company that sells scale models of classic cars. The database contains 8 tables and the schema is shown below:
+The project is made using the `classicmodels` database. The database is a sample database created by MySQL and can be downloaded from [here](https://www.mysqltutorial.org/mysql-sample-database.aspx/). The database is a simple database containing information about a company that sells scale models of classic cars. The database contains 8 tables and the schema is shown below:\
 [<img src="https://www.mysqltutorial.org/wp-content/uploads/2009/12/MySQL-Sample-Database-Schema.png" width="620"/>](https://www.mysqltutorial.org/wp-content/uploads/2009/12/MySQL-Sample-Database-Schema.png)
 
 ### How to run

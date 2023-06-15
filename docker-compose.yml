@@ -1,0 +1,36 @@
+﻿services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=HelloWorld00
+      - MYSQL_DATABASE=classicmodels
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./dump.sql:/docker-entrypoint-initdb.d/classicmodels.sql
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: "exit 0"
+  dashboard-api:
+    build:
+      context: ./DashboardAPI
+      dockerfile: Dockerfile
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=root
+      - MYSQL_ROOT_PASSWORD=HelloWorld00
+      - MYSQL_DATABASE=classicmodels
+    ports:
+      - "5000:80"
+    depends_on:
+      mysql:
+        condition: service_healthy
+  dashborad-ui:
+    build:
+      context: ./dashboard-ui
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"
+
+volumes:
+  mysql-data:

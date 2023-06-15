@@ -1,0 +1,22 @@
+<div class="max-w-xl">
+  <div class="section-title">Orders</div>
+  <ul class="divide-y divide-gray-300" role="list">
+    <li *ngFor="let order of orders" [routerLink]="['orders', order.orderNumber]" class="list-item">
+      <div class="flex gap-x-4">
+        <div class="min-w-0 flex-auto">
+          <p class="text-sm font-semibold leading-6 text-gray-900">Order {{order.orderNumber}}</p>
+          <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{order.status}}</p>
+        </div>
+      </div>
+      <div class="hidden sm:flex sm:flex-col sm:items-end">
+        <p class="text-sm leading-6 text-gray-900">Order Date: {{order.orderDate|date}}</p>
+        <ng-container *ngIf="order.status === 'Shipped'">
+          <p class="mt-1 text-xs leading-5 text-gray-500">Shipped Date: {{order.shippedDate|date}}</p>
+        </ng-container>
+        <ng-container *ngIf="order.status !== 'Shipped'">
+          <p class="mt-1 text-xs leading-5 text-gray-500">Required Date: {{order.requiredDate|date}}</p>
+        </ng-container>
+      </div>
+    </li>
+  </ul>
+</div>

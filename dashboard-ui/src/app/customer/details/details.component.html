@@ -1,0 +1,26 @@
+<div *ngIf="customer" class="max-w-xl">
+  <div class="px-4 sm:px-0">
+    <h3 class="section-title">Customer Information</h3>
+    <p class=" max-w-xl text-sm leading-6 text-gray-500">Personal details and orders.</p>
+  </div>
+  <div class="mt-4 border-t border-gray-150">
+    <dl class="divide-y divide-gray-100">
+      <div class="information-line">
+        <dt class="information-title">Customer</dt>
+        <dd class="information-value">{{customer.customerName}}</dd>
+      </div>
+      <div class="information-line">
+        <dt class="information-title">Contact Name</dt>
+        <dd class="information-value">{{customer.contactName }}</dd>
+      </div>
+      <div class="information-line">
+        <dt class="information-title">Phone</dt>
+        <dd class="information-value">{{customer.phone}}</dd>
+      </div>
+      <div class="information-line">
+        <dt class="information-title">Address</dt>
+        <dd class="information-value">{{customer.address}}</dd>
+      </div>
+    </dl>
+  </div>
+</div>

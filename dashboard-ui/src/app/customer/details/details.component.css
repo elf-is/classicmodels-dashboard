@@ -1,0 +1,11 @@
+.information-line {
+  @apply px-2 py-1 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0;
+}
+
+.information-title {
+  @apply text-sm font-medium leading-6 text-gray-900;
+}
+
+.information-value {
+  @apply mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0;
+}

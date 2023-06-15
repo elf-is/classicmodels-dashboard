@@ -1,0 +1,30 @@
+<nav class="bg-gray-800">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!--    <div *ngIf="isAuthenticated" class="flex h-16 items-center justify-between">-->
+    <div class="flex h-16 items-center justify-between">
+      <div class="flex items-center">
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex">
+            <a [routerLinkActiveOptions]={exact:true} ariaCurrentWhenActive="page" class="nav-btn"
+               routerLink="customers"
+               routerLinkActive="btn-active">Customers
+            </a>
+            <ng-container *ngIf="customerId">
+              <span class="my-auto text-gray-300 mx-2"> > </span>
+              <a [routerLinkActiveOptions]={exact:true} [routerLink]="['/customer', customerId]" ariaCurrentWhenActive="page"
+                 class="nav-btn"
+                 routerLinkActive="btn-active">Customer {{customerId}}
+              </a>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <!--      <div class="hidden sm:ml-6 sm:block">-->
+      <!--        <div>-->
+      <!--          <a (click)="onLogout()" class="nav-btn">Logout-->
+      <!--          </a>-->
+      <!--        </div>-->
+      <!--      </div>-->
+    </div>
+  </div>
+</nav>

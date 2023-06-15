@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply bg-gray-100 h-full;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  @apply h-full;
+}
+
+select {
+  @apply w-14 mx-1;
+}
+
+div[id^="DataTables_Table_"] table[id^="DataTables_Table_"] {
+  @apply my-2;
+}
+
+div[id^="DataTables_Table_"] table[id^="DataTables_Table_"] tr td {
+  @apply w-48 text-center;
+}
+
+div[id^="DataTables_Table_"] table[id^="DataTables_Table_"] tbody tr {
+  @apply odd:bg-transparent even:bg-blue-200;
+}
+
+.text-lg {
+  font-size: 1rem;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.section-title {
+  @apply text-2xl font-bold text-gray-900;
+}
